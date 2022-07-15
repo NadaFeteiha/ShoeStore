@@ -11,10 +11,6 @@
             type="com.udacity.shoestore.models.Shoe" />
 
         <variable
-            name="index"
-            type="int" />
-
-        <variable
             name="shoeViewModel"
             type="com.udacity.shoestore.viewmodel.ShoeViewModel" />
     </data>

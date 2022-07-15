@@ -43,7 +43,7 @@ class ShoeDetailFragment : Fragment() {
             cancelBtn.findNavController()
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
-
+        
         binding.saveBtn.setOnClickListener { saveBtn ->
             if (validate()) {
                 if (binding.shoe == null) {
