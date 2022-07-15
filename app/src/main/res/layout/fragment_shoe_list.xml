@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.ShoeListFragment">
 
+    <!-- Here will display a list of shoes.
+         constrainLayout that has 2 child scrollview and a float button
+          then the scrollview has a linearLayout that will programmatically
+           add views (Shoe details) inside it.
+            I used constrain layout so I can add a button at end/bottom and be above scrollview  -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

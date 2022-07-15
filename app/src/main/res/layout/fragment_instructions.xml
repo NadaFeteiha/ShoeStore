@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.onboarding.InstructionsFragment">
 
+    <!--this is on-boarding screen that display
+       - imageview which is a vector,
+       - 2 textView with different style,
+       - and a button to go to next fragment
+        I used ConstraintLayout rather than Linear because I need the button be at end/bottom screen-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.auth.LoginFragment">
 
+    <!-- Used: ConstraintLayout and Guideline
+         This screen display:
+            - 2 input text that should take email, and password
+               they took style from material design 3
+             - A button for login
+             - a text act as button clickable to go to Signup screen
+             I used ConstraintLayout but I can use Linear and will act hte same without nested   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

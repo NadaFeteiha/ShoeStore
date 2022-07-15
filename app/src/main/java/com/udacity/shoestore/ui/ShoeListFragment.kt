@@ -15,7 +15,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.util.Constants
 import com.udacity.shoestore.util.Util
 import com.udacity.shoestore.viewmodel.ShoeViewModel
 
@@ -45,7 +44,7 @@ class ShoeListFragment : Fragment() {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                Util.saveLoginStatus(requireContext(),false)
+                Util.saveLoginStatus(requireContext(), false)
                 findNavController()
                     .navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
                 return true
@@ -56,7 +55,7 @@ class ShoeListFragment : Fragment() {
     private fun setData() {
         shoeViewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
 
-        shoeViewModel.shoeList.observe(viewLifecycleOwner, Observer { shoeItems ->
+        shoeViewModel.shoeList.observe(viewLifecycleOwner) { shoeItems ->
             if (shoeItems.isEmpty()) {
                 binding.shoeLinearList.visibility = View.GONE
                 binding.emptyTxt.visibility = View.VISIBLE
@@ -68,7 +67,7 @@ class ShoeListFragment : Fragment() {
                     setDataDynamicView(index, shoe)
                 }
             }
-        })
+        }
     }
 
     private fun buildView(shoe: Shoe): View {

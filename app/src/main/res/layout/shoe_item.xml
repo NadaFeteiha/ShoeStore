@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- the linearLayout here has one child the CardView
+          inside the card-view I used constrain layout that act as
+          a table (item , value ) and between each row a view act as divider
+          I used also Barrier so the values will start after the end of max-length item name-->
     <LinearLayout
         android:id="@+id/shoe_item"
         android:layout_width="match_parent"

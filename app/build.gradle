@@ -55,8 +55,15 @@ dependencies {
     implementation "com.google.android.material:material:$material_design_version"
 
     //ViewModel
-    implementation "androidx.lifecycle:lifecycle-extensions:$viewmodel"
+//    implementation "androidx.lifecycle:lifecycle-extensions:$viewmodel"
+
+    //fragment
     implementation "androidx.fragment:fragment-ktx:$fragmentx"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //splash
     implementation 'androidx.core:core-splashscreen:1.0.0-rc01'

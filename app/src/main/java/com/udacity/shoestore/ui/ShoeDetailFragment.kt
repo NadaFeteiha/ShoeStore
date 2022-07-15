@@ -1,5 +1,6 @@
 package com.udacity.shoestore.ui
 
+import android.icu.number.IntegerWidth
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,13 +11,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodel.ShoeViewModel
-import kotlinx.android.synthetic.main.fragment_shoe_detail.*
-import kotlinx.android.synthetic.main.shoe_item.*
 
 class ShoeDetailFragment : Fragment() {
 
@@ -29,7 +29,9 @@ class ShoeDetailFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
 
-        binding.shoe = shoeViewModel
+        binding.shoeViewModel = shoeViewModel
+        binding.shoe = shoeViewModel.getSelectedShoe()
+        binding.lifecycleOwner = this
 
         setListeners()
 
@@ -44,10 +46,10 @@ class ShoeDetailFragment : Fragment() {
 
         binding.saveBtn.setOnClickListener { saveBtn ->
             if (validate()) {
-                if (shoeViewModel.getSelectedShoe() == null) {
+                if (binding.shoe == null) {
                     shoeViewModel.addNewShoe(getShoe())
                 } else {
-                    shoeViewModel.updateSelectedShoe(getShoe())
+                    shoeViewModel.updateSelectedShoe(binding.shoe as Shoe)
                 }
                 saveBtn.findNavController()
                     .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())

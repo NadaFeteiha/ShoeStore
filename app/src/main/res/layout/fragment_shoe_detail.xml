@@ -8,9 +8,23 @@
 
         <variable
             name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
+        <variable
+            name="index"
+            type="int" />
+
+        <variable
+            name="shoeViewModel"
             type="com.udacity.shoestore.viewmodel.ShoeViewModel" />
     </data>
 
+
+    <!--THis screen contains InputTexts to take information about shoe.
+        and 2 buttons for save and cancel.
+        I used  ConstraintLayout so I don't need many nested layout
+          because the end 2 button will need different behavior
+          (if linearLayout I will use one as a container for all view group that inside it another linear that contain 2 button)-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="@{shoe.getSelectedShoe().name}" />
+                android:text="@={shoe.name}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="@{shoe.getSelectedShoe().company}" />
+                android:text="@={shoe.company}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:text="@{shoe.getSelectedShoe().size != 0.0 ? Double.toString(shoe.getSelectedShoe().size): null}" />
+                android:text="@={``+shoe.size}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +108,7 @@
                 android:inputType="textMultiLine"
                 android:maxLines="10"
                 android:minLines="6"
-                android:text="@{shoe.getSelectedShoe().description}" />
+                android:text="@={shoe.description}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

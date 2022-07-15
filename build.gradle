@@ -5,13 +5,14 @@ buildscript {
     ext.kotlin_version = '1.6.0'
     ext.nav_version = '2.3.0'
     ext.material_design_version = "1.6.1"
-    ext.viewmodel= '2.2.0'
-    ext.fragmentx= '1.5.0'
+    ext.viewmodel = '2.2.0'
+    ext.fragmentx = '1.5.0'
+    ext.lifecycle_version = '2.3.0'
 
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.1'
@@ -27,7 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 

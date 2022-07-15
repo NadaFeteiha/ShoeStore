@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.auth.SignUpFragment">
 
+    <!-- This screen contains a constraintLayout that has many children view:
+            - a imageview.
+            - 4 input text that take the full name,phone, email, and password
+              all have a style inherit from material3
+            - a button to sing-up and go next.
+            I used constraintLayout rather than Linearlayout
+            but there is no different I can use Linearlayout and act the same in this view   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
