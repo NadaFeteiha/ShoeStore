@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.onboarding.WelcomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/regular_margin"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/welcome_iv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_shoe" />
+
+        <TextView
+            android:id="@+id/welcome_tv"
+            style="@style/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/welcome_tv"
+            app:layout_constraintEnd_toEndOf="@id/end_guid"
+            app:layout_constraintStart_toStartOf="@id/start_guid"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_iv" />
+
+        <TextView
+            android:id="@+id/msg_tv"
+            style="@style/regularTextViewDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:gravity="center"
+            android:text="@string/welcome_msg"
+            app:layout_constraintEnd_toStartOf="@id/end_guid"
+            app:layout_constraintStart_toEndOf="@id/start_guid"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_tv" />
+
+        <Button
+            android:id="@+id/end_welcome_btn"
+            style="@style/outLineIconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:icon="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/end_guid" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/regular_margin" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/regular_margin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

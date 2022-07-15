@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="titleTextView" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/h1_font_size</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="subTitleTextView" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">@dimen/h1_font_size</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="regularTextView" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/regular_font</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="regularTextViewDark" parent="@style/regularTextView">
+        <item name="android:textSize">@dimen/regular_font</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="bodyTextView" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/body_font</item>
+        <item name="fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+
+    <style name="actionButton" parent="@style/MaterialAlertDialog.Material3">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="elevation">@dimen/btn_elevation</item>
+    </style>
+
+    <style name="outLinedButton" parent="@style/Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="outLineIconButton" parent="outLinedButton">
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="cardOutline" parent="@style/Widget.Material3.CardView.Outlined">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeWidth">@dimen/card_strokeWidth</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:alpha">0.4</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_img</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+</resources>

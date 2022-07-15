@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--       Margin              -->
+    <dimen name="regular_margin">16dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+
+    <!--       Padding              -->
+    <dimen name="regular_padding">16dp</dimen>
+    <dimen name="medium_padding">8dp</dimen>
+
+    <!--       Fonts              -->
+    <dimen name="body_font">12sp</dimen>
+    <dimen name="regular_font">14sp</dimen>
+    <dimen name="h2_font_size">16sp</dimen>
+    <dimen name="h1_font_size">24sp</dimen>
+
+    <!--        Elevation        -->
+    <dimen name="btn_elevation">2dp</dimen>
+
+    <dimen name="card_strokeWidth">1dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+
+    <dimen name="divider_height">1dp</dimen>
+</resources>

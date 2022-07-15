@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+
+    <string name="login_menu">Login</string>
+    <string name="home_menu">Home</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="welcome_tv">Welcome to Shoe Store!!</string>
+    <string name="welcome_msg">Hope you have a good experiment will browsing the application. </string>
+
+    <string name="instructions">Instructions</string>
+    <string name="instruction_tv">Here is your Guid to this application!!</string>
+    <string name="instruction_msg">to add a new product(Shoe) you can click on action button and enter all the detail and will appear immediately in your list.</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_btn">Log in</string>
+    <string name="new_account">Don\'t have an account? <b><u>sign up</u></b></string>
+    <string name="full_name">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="signup">Sign up</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="next">Next</string>
+    <string name="logout">Logout</string>
+
+    <string name="no_item">No items yet!!</string>
+    <string name="add_new_shoe_title">Add New Shoe</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <string name="error_msg_all_mandatory">Please, fill all fields!!</string>
+    <string name="shoe_name_error">Enter a shoe brand</string>
+    <string name="company_error">Enter a company name</string>
+    <string name="shoe_size_error">Enter a shoe size</string>
+    <string name="shoe_description_error">Enter a description</string>
+
+</resources>

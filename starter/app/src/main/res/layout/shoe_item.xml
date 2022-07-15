@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/shoe_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shoe_card"
+            style="@style/cardOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/regular_padding">
+
+                <TextView
+                    android:id="@+id/shoe_name_tv"
+                    style="@style/regularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/medium_padding"
+                    android:paddingBottom="@dimen/medium_padding"
+                    android:text="@string/shoe_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shoe_name"
+                    style="@style/regularTextViewDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    app:layout_constraintBaseline_toBaselineOf="@id/shoe_name_tv"
+                    app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+                <View
+                    android:id="@+id/name_divider"
+                    style="@style/divider"
+                    android:layout_width="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shoe_name_tv" />
+
+                <TextView
+                    android:id="@+id/company_tv"
+                    style="@style/regularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/medium_padding"
+                    android:paddingBottom="@dimen/medium_padding"
+                    android:text="@string/shoe_company"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name_divider" />
+
+                <TextView
+                    android:id="@+id/company"
+                    style="@style/regularTextViewDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    app:layout_constraintBaseline_toBaselineOf="@id/company_tv"
+                    app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+                <View
+                    style="@style/divider"
+                    android:layout_width="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/company_tv" />
+
+                <TextView
+                    android:id="@+id/size_tv"
+                    style="@style/regularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/medium_padding"
+                    android:paddingBottom="@dimen/medium_padding"
+                    android:text="@string/shoe_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/company_tv" />
+
+                <TextView
+                    android:id="@+id/size"
+                    style="@style/regularTextViewDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    app:layout_constraintBaseline_toBaselineOf="@id/size_tv"
+                    app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+                <View
+                    style="@style/divider"
+                    android:layout_width="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/size_tv" />
+
+                <TextView
+                    android:id="@+id/description_tv"
+                    style="@style/regularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/medium_padding"
+                    android:paddingBottom="@dimen/medium_padding"
+                    android:text="@string/shoe_description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/size_tv" />
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/regularTextViewDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/instruction_msg"
+                    app:layout_constraintBaseline_toBaselineOf="@id/description_tv"
+                    app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="end"
+                    app:barrierMargin="@dimen/regular_margin"
+                    app:constraint_referenced_ids="shoe_name_tv,company_tv,size_tv,description_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>
